@@ -1,0 +1,51 @@
+.cart-content{
+    margin-top: 130px;
+
+width: 100%;
+}
+
+
+.img-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgproduct{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 5px;
+}
+.table{
+  width: 700px;
+}
+.tablecontent{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.productcontent{
+   
+    background-color: rgb(231, 231, 231);
+    
+}
+.foottable{
+
+text-align: end; 
+}
+
+
+@media only screen and (max-width: 575px) {
+    .cart-content{
+        margin-top: 00px;
+
+    width: 100%;
+   
+    
+    
+    }  
+}

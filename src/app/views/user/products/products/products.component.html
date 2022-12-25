@@ -1,0 +1,40 @@
+<div class="margin-top" *ngIf="!loading">
+  <div class="productpageone">
+    <h5>PRODUCT OVERVIEW</h5>
+
+    <select
+      class="navitems form-select custom-select"
+      (change)="filtercategory($event)"
+    >
+      <option value="all" selected>All Categories</option>
+      <option class="dropdawn" value="{{ catg }}" *ngFor="let catg of categories">
+        {{ catg }}
+      </option>
+    </select>
+  </div>
+  <div class="flex">
+    <div *ngFor="let i of product | filter:searchKey: 'title'">
+      <div class="cardproduct"  routerLink="/details/{{ i.id }}">
+        <img   src="{{ i.image }}" alt="Avatar" style="width: 100% "  />
+        <div class="containerproduct">
+          <h4 class="titleofprod">
+            {{ i.title }}
+          </h4>
+          <div class="flexprodprice">
+            <button
+              class="btn btn-outline-dark"
+              routerLink="/details/{{ i.id }}"
+            >
+              BUY
+            </button>
+
+            <p>
+              <b>{{ i.price }}$</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="spinner" *ngIf="loading"><app-spinner></app-spinner></div> -->

@@ -1,0 +1,53 @@
+.form{
+  
+    width: 400px;
+  margin: auto;
+  height: 400px;
+
+ 
+}
+.all-content{
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+ flex-wrap: wrap;
+
+}
+.map  img{
+    width: 500px;
+    height: 400px;
+    border-radius: 20px;
+
+}
+@media (max-width: 576px) {
+    .form{
+  
+        width: 300px;
+      margin: auto;
+      height: fit-content;
+    
+     
+    }
+    .all-content{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+     flex-wrap: wrap;
+    
+    }
+    .map  img{
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+    }    
+
+}
+
+.boo{
+
+    width: 200px;
+    display: flex;
+}

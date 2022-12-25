@@ -1,0 +1,40 @@
+<div class="cart-content">
+<div class="img-card"   *ngIf="!getingproducts || getingproducts.length === 0">
+<img src="../assets/img/emptycart.png" alt=""></div>
+    
+<div class="tablecontent" *ngIf="getingproducts.length !=0">
+
+    <table class="table">
+        <thead >
+          <tr >
+          
+            <th scope="col">Image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Delete</th>
+          
+            <button (click)="emptycart()"class="btn btn-dark"><i class='fa fa-close'></i></button>
+          </tr>
+        </thead>
+        <tbody >
+          <tr  class="productcontent"  *ngFor="let item of getingproducts">
+          
+            <img class="imgproduct" src="{{item.image}}" alt="">
+            <td>{{item.title}}</td>
+            <td>{{item.price}}$</td>
+            <td>   <button (click)="deleteproduct(item)" class="btn btn-danger"><i  class="fa fa-trash"></i></button> </td>
+           
+          </tr>
+
+          <td class="foottable"> <td  ><strong>Total Price :</strong>  {{grandtotal}}$</td> 
+          <td><button  (click)="no()" class="btn btn-outline-dark">
+ 
+ 
+            <i class='fa-solid fa-truck-fast'></i> Commander</button></td>
+        </tbody>
+     
+      </table>
+
+
+</div>
+</div>

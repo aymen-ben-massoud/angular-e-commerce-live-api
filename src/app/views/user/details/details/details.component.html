@@ -1,0 +1,28 @@
+<div class="margin-top">
+  <div class="all-contetn">
+    <div class="img">
+      <img src="{{ data.image }}" alt="" />
+    </div>
+    <div class="text">
+      <button class="btn btn-outline-dark btn1" routerLink="/products">
+        {{ data.category }}
+      </button>
+      <h1>{{ data.title }}</h1>
+      <p class="description">{{ data.description }}</p>
+      <p>
+        Price : <b> {{ data.price }}$</b>
+      </p>
+      <button 
+
+      (click)="add()"
+     
+        (click)="addbutton = true"
+        (click)="buy = false"
+        class="btn btn-outline-dark btn2"
+      >
+        <i *ngIf="addbutton" class="fa-solid fa-check"></i>
+        <b *ngIf="!addbutton"> BUY </b>
+      </button>
+    </div>
+  </div>
+</div>
